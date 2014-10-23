@@ -1,7 +1,8 @@
-// GPACalc.cpp : 定义控制台应用程序的入口点。
-//
-
-#include "stdafx.h"
+#include <iostream>
+#include <sstream>
+#include <vector>
+#include <iomanip>
+#include <fstream>
 
 #define SAFE_RELEASE(p) if((p))delete(p);(p)=nullptr;
 
@@ -19,7 +20,7 @@ typedef struct {
     float gpa;
 } DataItem;
 
-int _tmain(int argc, _TCHAR* argv[]) {
+int main(int argc, wchar_t* argv[]) {
     system("mode con cols=140 lines=40");
 
     cout << "本程序将根据数据文件自动计算您的平均绩点(GPA)" << endl;
@@ -112,7 +113,7 @@ int _tmain(int argc, _TCHAR* argv[]) {
     float _gpa = _a / _credit_sum;
 
     cout << "\n您的平均绩点为：" << setprecision(4) << _gpa << endl;
-    cout << "\n[ver0.2 Powered by Micooz @ Chengdu university of technology 2014/10/09] Good Luck！" << endl;
+    cout << "\n[ver0.2 Powered by Micooz @ Chengdu university of technology 2014/10/09] Good Luck." << endl;
     cout << endl;
 
     system("pause");
